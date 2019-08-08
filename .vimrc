@@ -36,6 +36,9 @@ Plug 'skywind3000/vim-preview'
 Plug 'Yggdroot/LeaderF', {'do':'./install.sh'}
 Plug 'skywind3000/asyncrun.vim'
 
+Plug 'inkarkat/vim-ingo-library'                             
+Plug 'inkarkat/vim-mark' 
+
 " Initialize plugin system
 call plug#end()
 
