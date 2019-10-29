@@ -17,7 +17,7 @@ Plug 'tpope/vim-fugitive'
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'L9'
 " Git plugin not hosted on GitHub
-Plug 'git://git.wincent.com/command-t.git'
+Plug 'wincent/command-t'
 " git repos on your local machine (i.e. when working on your own plugin)
 "Plugin 'file:///home/gmarik/path/to/plugin'
 " The sparkup vim script is in a subdirectory of this repo called vim.
@@ -38,6 +38,9 @@ Plug 'skywind3000/asyncrun.vim'
 
 Plug 'inkarkat/vim-ingo-library'                             
 Plug 'inkarkat/vim-mark' 
+
+" MakrdownPreview plugin
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Initialize plugin system
 call plug#end()
@@ -62,6 +65,7 @@ set fenc=utf-8
 set hlsearch
 set list
 set listchars=tab:\|\ ,trail:.,extends:>,precedes:<
+set tags=./.tags;,.tags,GTAGS
 set csprg=gtags-cscope
 "---------------------------------------------------------------------------
 map <F2> :NERDTreeToggle<CR>
@@ -113,3 +117,8 @@ let g:asyncrun_open = 6
 let g:asyncrun_bell = 1
 nnoremap <F10> :call asyncrun#quickfix_toggle(6)<cr>
 "---------------------------------------------------------------------------
+" 十字光标
+set cursorline cursorcolumn
+nnoremap <Leader>c :set cursorline! cursorcolumn!<CR>
+hi CursorLine   cterm=bold ctermbg=darkgray ctermfg=NONE guibg=lightgrey guifg=white
+hi CursorColumn cterm=NONE ctermbg=darkgray ctermfg=NONE guibg=lightgrey guifg=white
