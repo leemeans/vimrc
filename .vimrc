@@ -42,6 +42,9 @@ Plug 'inkarkat/vim-mark'
 " MakrdownPreview plugin
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
+" DirDiff command for directory diff
+Plug 'will133/vim-dirdiff'
+
 " Initialize plugin system
 call plug#end()
 
